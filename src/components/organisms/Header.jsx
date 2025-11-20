@@ -1,13 +1,17 @@
-import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
-import ApperIcon from "@/components/ApperIcon";
+import { NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useAuth } from "@/layouts/Root";
+import { useSelector } from "react-redux";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
 
-const Header = () => {
+function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-
-  const navigationItems = [
+  const { logout } = useAuth();
+  const { user, isAuthenticated } = useSelector(state => state.user);
+const navigationItems = [
     { path: "/", label: "Dashboard", icon: "LayoutDashboard" },
     { path: "/pipeline", label: "Pipeline", icon: "GitBranch" },
     { path: "/contacts", label: "Contacts", icon: "Users" },
@@ -36,31 +40,60 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                className={`relative flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
-                  isActive(item.path)
-                    ? "text-primary bg-blue-50 font-semibold"
-                    : "text-secondary hover:text-primary hover:bg-slate-50"
-                }`}
-              >
-                <ApperIcon name={item.icon} className="w-4 h-4" />
-                <span className="font-medium">{item.label}</span>
-                {isActive(item.path) && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-600/10 rounded-lg"
-                    initial={false}
-                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                  />
+{/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <nav className="flex items-center space-x-8">
+              {navigationItems.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={`relative flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                    isActive(item.path)
+                      ? "text-primary bg-blue-50 font-semibold"
+                      : "text-secondary hover:text-primary hover:bg-slate-50"
+                  }`}
+                >
+                  <ApperIcon name={item.icon} className="w-4 h-4" />
+                  <span className="font-medium">{item.label}</span>
+                  {isActive(item.path) && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-600/10 rounded-lg"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    />
+                  )}
+                </NavLink>
+              ))}
+            </nav>
+            
+            {/* User Menu */}
+            {isAuthenticated && (
+              <div className="flex items-center space-x-4">
+                {user && (
+                  <div className="hidden md:flex items-center space-x-3">
+                    <div className="text-right">
+                      <div className="text-sm font-medium text-slate-900">
+                        {user.firstName} {user.lastName}
+                      </div>
+                      <div className="text-xs text-secondary">
+                        {user.emailAddress}
+                      </div>
+                    </div>
+                  </div>
                 )}
-              </NavLink>
-            ))}
-          </nav>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={logout}
+                  className="flex items-center space-x-2"
+                >
+                  <ApperIcon name="LogOut" className="w-4 h-4" />
+                  <span>Logout</span>
+                </Button>
+              </div>
+            )}
+          </div>
 
           {/* Mobile menu button */}
           <button
@@ -85,23 +118,50 @@ const Header = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200"
           >
-            <nav className="px-4 py-4 space-y-2">
-              {navigationItems.map((item) => (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
-                    isActive(item.path)
-                      ? "text-primary bg-blue-50 font-semibold border-l-4 border-primary"
-                      : "text-secondary hover:text-primary hover:bg-slate-50"
-                  }`}
-                >
-                  <ApperIcon name={item.icon} className="w-5 h-5" />
-                  <span className="font-medium">{item.label}</span>
-                </NavLink>
-              ))}
-            </nav>
+<div className="px-4 py-4">
+              <nav className="space-y-2">
+                {navigationItems.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+                      isActive(item.path)
+                        ? "text-primary bg-blue-50 font-semibold border-l-4 border-primary"
+                        : "text-secondary hover:text-primary hover:bg-slate-50"
+                    }`}
+                  >
+                    <ApperIcon name={item.icon} className="w-5 h-5" />
+                    <span className="font-medium">{item.label}</span>
+                  </NavLink>
+                ))}
+              </nav>
+              
+              {/* Mobile User Section */}
+              {isAuthenticated && (
+                <div className="mt-6 pt-6 border-t border-slate-200">
+                  {user && (
+                    <div className="px-4 py-2 mb-4">
+                      <div className="text-sm font-medium text-slate-900">
+                        {user.firstName} {user.lastName}
+                      </div>
+                      <div className="text-xs text-secondary">
+                        {user.emailAddress}
+                      </div>
+                    </div>
+                  )}
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={logout}
+                    className="w-full flex items-center justify-center space-x-2 mx-4"
+                  >
+                    <ApperIcon name="LogOut" className="w-4 h-4" />
+                    <span>Logout</span>
+                  </Button>
+                </div>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
