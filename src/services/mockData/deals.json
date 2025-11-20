@@ -1,0 +1,112 @@
+[
+  {
+    "Id": 1,
+    "contactId": 1,
+    "title": "Enterprise CRM Implementation",
+    "value": 25000,
+    "stage": "Proposal",
+    "expectedCloseDate": "2024-03-15T00:00:00.000Z",
+    "probability": 75,
+    "createdAt": "2024-01-15T10:30:00.000Z",
+    "updatedAt": "2024-02-10T14:20:00.000Z"
+  },
+  {
+    "Id": 2,
+    "contactId": 2,
+    "title": "Startup Package Deal",
+    "value": 5000,
+    "stage": "Qualified",
+    "expectedCloseDate": "2024-02-28T00:00:00.000Z",
+    "probability": 50,
+    "createdAt": "2024-01-18T14:20:00.000Z",
+    "updatedAt": "2024-02-05T09:15:00.000Z"
+  },
+  {
+    "Id": 3,
+    "contactId": 3,
+    "title": "Manufacturing Automation Suite",
+    "value": 45000,
+    "stage": "Lead",
+    "expectedCloseDate": "2024-04-30T00:00:00.000Z",
+    "probability": 25,
+    "createdAt": "2024-01-20T09:15:00.000Z",
+    "updatedAt": "2024-01-20T09:15:00.000Z"
+  },
+  {
+    "Id": 4,
+    "contactId": 4,
+    "title": "Consulting Partnership",
+    "value": 15000,
+    "stage": "Closed Won",
+    "expectedCloseDate": "2024-02-15T00:00:00.000Z",
+    "probability": 100,
+    "createdAt": "2024-01-22T16:45:00.000Z",
+    "updatedAt": "2024-02-15T10:00:00.000Z"
+  },
+  {
+    "Id": 5,
+    "contactId": 5,
+    "title": "Marketing Agency Tools",
+    "value": 8500,
+    "stage": "Qualified",
+    "expectedCloseDate": "2024-03-10T00:00:00.000Z",
+    "probability": 50,
+    "createdAt": "2024-01-25T11:30:00.000Z",
+    "updatedAt": "2024-02-08T16:20:00.000Z"
+  },
+  {
+    "Id": 6,
+    "contactId": 6,
+    "title": "Healthcare Compliance Solution",
+    "value": 35000,
+    "stage": "Lead",
+    "expectedCloseDate": "2024-05-15T00:00:00.000Z",
+    "probability": 25,
+    "createdAt": "2024-01-28T13:00:00.000Z",
+    "updatedAt": "2024-01-28T13:00:00.000Z"
+  },
+  {
+    "Id": 7,
+    "contactId": 7,
+    "title": "Retail Management System",
+    "value": 22000,
+    "stage": "Proposal",
+    "expectedCloseDate": "2024-03-20T00:00:00.000Z",
+    "probability": 75,
+    "createdAt": "2024-02-01T08:45:00.000Z",
+    "updatedAt": "2024-02-12T11:30:00.000Z"
+  },
+  {
+    "Id": 8,
+    "contactId": 8,
+    "title": "Financial Advisory CRM",
+    "value": 12000,
+    "stage": "Qualified",
+    "expectedCloseDate": "2024-03-05T00:00:00.000Z",
+    "probability": 50,
+    "createdAt": "2024-02-03T15:20:00.000Z",
+    "updatedAt": "2024-02-10T09:45:00.000Z"
+  },
+  {
+    "Id": 9,
+    "contactId": 1,
+    "title": "Additional Modules Purchase",
+    "value": 8000,
+    "stage": "Lead",
+    "expectedCloseDate": "2024-04-10T00:00:00.000Z",
+    "probability": 25,
+    "createdAt": "2024-02-10T10:15:00.000Z",
+    "updatedAt": "2024-02-10T10:15:00.000Z"
+  },
+  {
+    "Id": 10,
+    "contactId": 3,
+    "title": "Training & Support Package",
+    "value": 15000,
+    "stage": "Closed Lost",
+    "expectedCloseDate": "2024-02-20T00:00:00.000Z",
+    "probability": 0,
+    "createdAt": "2024-01-25T14:30:00.000Z",
+    "updatedAt": "2024-02-20T16:00:00.000Z"
+  }
+]

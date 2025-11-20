@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "react-toastify/dist/ReactToastify.css";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+  }
+}
+
+/* Toast customization */
+.Toastify__toast-container {
+  width: 320px;
+}
+
+.Toastify__toast {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.Toastify__progress-bar {
+  background: #2563eb;
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "Id": 1,
+    "dealId": 1,
+    "type": "deal_created",
+    "description": "Deal \"Enterprise CRM Implementation\" was created",
+    "timestamp": "2024-01-15T10:30:00.000Z"
+  },
+  {
+    "Id": 2,
+    "dealId": 1,
+    "type": "stage_change",
+    "description": "Deal \"Enterprise CRM Implementation\" moved from Lead to Qualified",
+    "timestamp": "2024-01-25T14:15:00.000Z"
+  },
+  {
+    "Id": 3,
+    "dealId": 1,
+    "type": "stage_change",
+    "description": "Deal \"Enterprise CRM Implementation\" moved from Qualified to Proposal",
+    "timestamp": "2024-02-10T14:20:00.000Z"
+  },
+  {
+    "Id": 4,
+    "dealId": 2,
+    "type": "deal_created",
+    "description": "Deal \"Startup Package Deal\" was created",
+    "timestamp": "2024-01-18T14:20:00.000Z"
+  },
+  {
+    "Id": 5,
+    "dealId": 2,
+    "type": "stage_change",
+    "description": "Deal \"Startup Package Deal\" moved from Lead to Qualified",
+    "timestamp": "2024-02-05T09:15:00.000Z"
+  },
+  {
+    "Id": 6,
+    "dealId": 3,
+    "type": "deal_created",
+    "description": "Deal \"Manufacturing Automation Suite\" was created",
+    "timestamp": "2024-01-20T09:15:00.000Z"
+  },
+  {
+    "Id": 7,
+    "dealId": 4,
+    "type": "deal_created",
+    "description": "Deal \"Consulting Partnership\" was created",
+    "timestamp": "2024-01-22T16:45:00.000Z"
+  },
+  {
+    "Id": 8,
+    "dealId": 4,
+    "type": "stage_change",
+    "description": "Deal \"Consulting Partnership\" moved from Lead to Qualified",
+    "timestamp": "2024-02-01T11:00:00.000Z"
+  },
+  {
+    "Id": 9,
+    "dealId": 4,
+    "type": "stage_change",
+    "description": "Deal \"Consulting Partnership\" moved from Qualified to Proposal",
+    "timestamp": "2024-02-10T15:30:00.000Z"
+  },
+  {
+    "Id": 10,
+    "dealId": 4,
+    "type": "stage_change",
+    "description": "Deal \"Consulting Partnership\" moved from Proposal to Closed Won",
+    "timestamp": "2024-02-15T10:00:00.000Z"
+  },
+  {
+    "Id": 11,
+    "dealId": 5,
+    "type": "deal_created",
+    "description": "Deal \"Marketing Agency Tools\" was created",
+    "timestamp": "2024-01-25T11:30:00.000Z"
+  },
+  {
+    "Id": 12,
+    "dealId": 5,
+    "type": "stage_change",
+    "description": "Deal \"Marketing Agency Tools\" moved from Lead to Qualified",
+    "timestamp": "2024-02-08T16:20:00.000Z"
+  },
+  {
+    "Id": 13,
+    "dealId": 6,
+    "type": "deal_created",
+    "description": "Deal \"Healthcare Compliance Solution\" was created",
+    "timestamp": "2024-01-28T13:00:00.000Z"
+  },
+  {
+    "Id": 14,
+    "dealId": 7,
+    "type": "deal_created",
+    "description": "Deal \"Retail Management System\" was created",
+    "timestamp": "2024-02-01T08:45:00.000Z"
+  },
+  {
+    "Id": 15,
+    "dealId": 7,
+    "type": "stage_change",
+    "description": "Deal \"Retail Management System\" moved from Lead to Qualified",
+    "timestamp": "2024-02-08T10:20:00.000Z"
+  },
+  {
+    "Id": 16,
+    "dealId": 7,
+    "type": "stage_change",
+    "description": "Deal \"Retail Management System\" moved from Qualified to Proposal",
+    "timestamp": "2024-02-12T11:30:00.000Z"
+  },
+  {
+    "Id": 17,
+    "dealId": 8,
+    "type": "deal_created",
+    "description": "Deal \"Financial Advisory CRM\" was created",
+    "timestamp": "2024-02-03T15:20:00.000Z"
+  },
+  {
+    "Id": 18,
+    "dealId": 8,
+    "type": "stage_change",
+    "description": "Deal \"Financial Advisory CRM\" moved from Lead to Qualified",
+    "timestamp": "2024-02-10T09:45:00.000Z"
+  },
+  {
+    "Id": 19,
+    "dealId": 9,
+    "type": "deal_created",
+    "description": "Deal \"Additional Modules Purchase\" was created",
+    "timestamp": "2024-02-10T10:15:00.000Z"
+  },
+  {
+    "Id": 20,
+    "dealId": 10,
+    "type": "deal_created",
+    "description": "Deal \"Training & Support Package\" was created",
+    "timestamp": "2024-01-25T14:30:00.000Z"
+  },
+  {
+    "Id": 21,
+    "dealId": 10,
+    "type": "stage_change",
+    "description": "Deal \"Training & Support Package\" moved from Lead to Qualified",
+    "timestamp": "2024-02-05T13:15:00.000Z"
+  },
+  {
+    "Id": 22,
+    "dealId": 10,
+    "type": "stage_change",
+    "description": "Deal \"Training & Support Package\" moved from Qualified to Closed Lost",
+    "timestamp": "2024-02-20T16:00:00.000Z"
+  }
+]
